@@ -101,7 +101,7 @@
                       <Component id="jButton6" min="-2" pref="131" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
-                      <Component id="jButton3" min="-2" pref="131" max="-2" attributes="0"/>
+                      <Component id="btnPlaylist1" min="-2" pref="131" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
                       <Component id="jButton4" min="-2" pref="131" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="155" max="-2" attributes="0"/>
@@ -125,7 +125,7 @@
               </Group>
               <EmptySpace min="-2" pref="99" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jButton3" alignment="3" min="-2" pref="131" max="-2" attributes="0"/>
+                  <Component id="btnPlaylist1" alignment="3" min="-2" pref="131" max="-2" attributes="0"/>
                   <Component id="jButton4" alignment="3" min="-2" pref="131" max="-2" attributes="0"/>
                   <Component id="jButton5" alignment="3" min="-2" pref="131" max="-2" attributes="0"/>
                   <Component id="jButton2" alignment="3" min="-2" pref="131" max="-2" attributes="0"/>
@@ -170,10 +170,13 @@
         <Property name="text" type="java.lang.String" value="jButton2"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton3">
+    <Component class="javax.swing.JButton" name="btnPlaylist1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jButton2"/>
+        <Property name="text" type="java.lang.String" value="Playlist 1 "/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnPlaylist1MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButton4">
       <Properties>

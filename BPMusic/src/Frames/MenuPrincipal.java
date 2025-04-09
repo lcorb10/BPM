@@ -4,6 +4,8 @@
  */
 package Frames;
 
+import Frames.PlayList.PlayList1;
+
 /**
  *
  * @author Sebastian
@@ -13,16 +15,15 @@ public class MenuPrincipal extends javax.swing.JFrame {
     /**
      * Creates new form MenuPrincipal
      */
-   
     private String user;
 
     public MenuPrincipal(String user) {
-         initComponents();
+        initComponents();
         this.user = user;
     }
 
     private MenuPrincipal() {
-       initComponents();
+        initComponents();
     }
 
     /**
@@ -42,7 +43,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        btnPlaylist1 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
@@ -77,7 +78,12 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jButton2.setText("jButton2");
 
-        jButton3.setText("jButton2");
+        btnPlaylist1.setText("Playlist 1 ");
+        btnPlaylist1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnPlaylist1MouseClicked(evt);
+            }
+        });
 
         jButton4.setText("jButton2");
 
@@ -145,7 +151,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
                         .addGap(136, 136, 136)
                         .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnPlaylist1, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(90, 90, 90)
                         .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(155, 155, 155)
@@ -164,7 +170,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(99, 99, 99)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPlaylist1, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -185,6 +191,14 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnPlaylist1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPlaylist1MouseClicked
+        PlayList1 playList1 = new PlayList1();
+        playList1.setLocationRelativeTo(null);
+        playList1.setVisible(true);
+        this.dispose(); // Cierra el frame actual donde esta btnPlayList1
+        
+    }//GEN-LAST:event_btnPlaylist1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -222,6 +236,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnPlaylist1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
@@ -232,7 +247,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
