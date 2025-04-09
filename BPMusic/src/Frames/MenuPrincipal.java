@@ -75,6 +75,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jButton1.setText("🔍");
 
         jTextField1.setText("¿Que quieres reproducir?");
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("jButton2");
 
@@ -82,6 +87,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
         btnPlaylist1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnPlaylist1MouseClicked(evt);
+            }
+        });
+        btnPlaylist1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPlaylist1ActionPerformed(evt);
             }
         });
 
@@ -199,6 +209,17 @@ public class MenuPrincipal extends javax.swing.JFrame {
         this.dispose(); // Cierra el frame actual donde esta btnPlayList1
         
     }//GEN-LAST:event_btnPlaylist1MouseClicked
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void btnPlaylist1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlaylist1ActionPerformed
+        // TODO add your handling code here:
+       PlayList1 p1 = new PlayList1();
+       p1.setVisible(true);
+       this.dispose();
+    }//GEN-LAST:event_btnPlaylist1ActionPerformed
 
     /**
      * @param args the command line arguments

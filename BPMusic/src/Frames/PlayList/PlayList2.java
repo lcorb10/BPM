@@ -21,15 +21,15 @@ import nodo.Nodo;
  *
  * @author jlaza
  */
-public class PlayList1 extends JFrame {
+public class PlayList2 extends JFrame {
 
-    public PlayList1() {
+    public PlayList2() {
 
         initComponents();
 
         try {
 
-            Image imagenOriginal = ImageIO.read(new File("C:\\Users\\Sebastian\\Downloads\\BPM-main\\BPMusic\\src\\Canciones\\LasLocurasMias.jpeg"));
+            Image imagenOriginal = ImageIO.read(new File("C:\\Users\\Sebastian\\Downloads\\BPM-main\\BPMusic\\src\\CancionesPlaylist2\\ab67616d0000b273851222dc5c5681bd4c3119d3.jpeg"));
 
             int nuevoAncho = 300;
             int nuevoAlto = 300;
@@ -47,7 +47,7 @@ public class PlayList1 extends JFrame {
 
             FotoCancion.setIcon(new ImageIcon(imagenRedimensionada));
             MiniFotoo.setIcon(new ImageIcon(imagenRedimensionada2));
-            MiniCancionName.setText("Las locuras mias");
+            MiniCancionName.setText("Memorias");
         } catch (IOException e) {
             e.printStackTrace();
             JOptionPane.showMessageDialog(this, "Error al cargar la imagen: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
@@ -101,29 +101,19 @@ public class PlayList1 extends JFrame {
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(null);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("0:00");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(190, 500, 21, 16);
-        getContentPane().add(FotoCancion);
-        FotoCancion.setBounds(240, 90, 370, 270);
-        getContentPane().add(jSlider2);
-        jSlider2.setBounds(220, 500, 320, 20);
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 500, -1, -1));
+        getContentPane().add(FotoCancion, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 90, 370, 270));
+        getContentPane().add(jSlider2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 500, 320, -1));
 
         btnSig.setText(">>");
-        getContentPane().add(btnSig);
-        btnSig.setBounds(460, 470, 72, 22);
+        getContentPane().add(btnSig, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 470, -1, -1));
 
         btnAnt.setText("<<");
-        btnAnt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAntActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnAnt);
-        btnAnt.setBounds(210, 470, 72, 22);
+        getContentPane().add(btnAnt, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 470, -1, -1));
 
         btnStop.setText("I I");
         btnStop.addActionListener(new java.awt.event.ActionListener() {
@@ -131,47 +121,37 @@ public class PlayList1 extends JFrame {
                 btnStopActionPerformed(evt);
             }
         });
-        getContentPane().add(btnStop);
-        btnStop.setBounds(330, 470, 72, 22);
+        getContentPane().add(btnStop, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 470, -1, -1));
 
         btnSig2.setText(">");
-        getContentPane().add(btnSig2);
-        btnSig2.setBounds(420, 470, 22, 22);
+        getContentPane().add(btnSig2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 470, -1, -1));
 
         btnAnt1.setText("<");
-        getContentPane().add(btnAnt1);
-        btnAnt1.setBounds(290, 470, 22, 22);
-        getContentPane().add(jSlider1);
-        jSlider1.setBounds(640, 470, 200, 20);
+        getContentPane().add(btnAnt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 470, -1, -1));
+        getContentPane().add(jSlider1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 470, -1, -1));
 
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("🔊");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(620, 470, 12, 16);
-        getContentPane().add(MiniFotoo);
-        MiniFotoo.setBounds(20, 470, 50, 50);
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 470, -1, -1));
+        getContentPane().add(MiniFotoo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 470, 50, 50));
 
         MiniCancionName.setForeground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(MiniCancionName);
-        MiniCancionName.setBounds(90, 470, 90, 30);
+        getContentPane().add(MiniCancionName, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 470, 90, 30));
 
         FONDONEGRO.setBackground(new java.awt.Color(0, 0, 0));
         FONDONEGRO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/1920x1080-px-black-1306365-wallhere.com.jpg"))); // NOI18N
         FONDONEGRO.setText(".");
-        getContentPane().add(FONDONEGRO);
-        FONDONEGRO.setBounds(0, 450, 890, 90);
+        getContentPane().add(FONDONEGRO, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 450, 890, 90));
 
         FONDOGRIS.setBackground(new java.awt.Color(204, 204, 204));
         FONDOGRIS.setForeground(new java.awt.Color(153, 153, 153));
         FONDOGRIS.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGENES/gris-solido.jpg"))); // NOI18N
         FONDOGRIS.setText(".");
-        getContentPane().add(FONDOGRIS);
-        FONDOGRIS.setBounds(-4, 0, 890, 510);
+        getContentPane().add(FONDOGRIS, new org.netbeans.lib.awtextra.AbsoluteConstraints(-4, 0, 890, 510));
 
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("3:20");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(550, 500, 21, 16);
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 500, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -179,11 +159,6 @@ public class PlayList1 extends JFrame {
     private void btnStopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStopActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnStopActionPerformed
-
-    private void btnAntActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAntActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_btnAntActionPerformed
 
     /**
      * @param args the command line arguments
@@ -202,20 +177,21 @@ public class PlayList1 extends JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(PlayList1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PlayList2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(PlayList1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PlayList2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(PlayList1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PlayList2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(PlayList1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PlayList2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new PlayList1().setVisible(true);
+                new PlayList2().setVisible(true);
             }
         });
     }

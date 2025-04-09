@@ -8,12 +8,14 @@ public class Nodo {
 
     private Nodo sig;
     private Nodo ant;
-    private String ruta;
+    private String rutaCan;
+    private String rutaPNG;
 
-    public Nodo(String ruta) {
-        this.ruta = ruta;
+    public Nodo(String ruta, String rutafoto) {
+        this.rutaCan = ruta;
         this.sig = null;
         this.ant = null;
+        this.rutaPNG = rutafoto;
     }
 
     public Nodo getSig() {
@@ -33,7 +35,12 @@ public class Nodo {
     }
 
     public String getRuta() {
-        return ruta;
+        return rutaCan;
     }
+
+    public String getRutaPNG() {
+        return rutaPNG;
+    }
+    
 
 }
